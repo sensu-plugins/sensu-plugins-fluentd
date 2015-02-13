@@ -17,36 +17,52 @@
 # Released under the same terms as Sensu (the MIT license); see LICENSE
 # for details.
 
-require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'sensu-handler'
 require 'net/http'
 require 'timeout'
 
+#
+# Sensu Handler class for Fluentd
+#
 class Fluentd < Sensu::Handler
+  # set the fluentd host
+  #
   def host
     settings['fluentd']['host'] || 'localhost'
   end
 
+  # set the fluentd port number
+  #
   def port
     settings['fluentd']['port'] || 9880
   end
 
+  # set the tag prefix
+  #
   def tag_prefix
     settings['fluentd']['tag_prefix'] || 'sensu'
   end
 
+  # create the event tag
+  #
   def event_tag
     tag_prefix + '.' + action_to_string.downcase
   end
 
+  # create the event name
+  #
   def event_name
     @event['client']['name'] + '/' + @event['check']['name']
   end
 
+  # check the event action
+  #
   def action_to_string
     @event['action'].eql?('resolve') ? 'RESOLVED' : 'ALERT'
   end
 
+  # main function
+  #
   def handle
     event = {
       action: action_to_string,

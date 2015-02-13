@@ -6,7 +6,7 @@
 #   This plugin checks fluentd monitor_agent.
 #
 # OUTPUT:
-#   plain text, metric data, etc
+#   plain text
 #
 # PLATFORMS:
 #   Linux
@@ -26,11 +26,13 @@
 #   for details.
 #
 
-require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'sensu-plugin/check/cli'
 require 'net/http'
 require 'json'
 
+#
+# Check Fluentd Monitor Agent
+#
 class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
   option :url,
          short: '-u URL',
@@ -51,6 +53,8 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
          long: '--metric METRIC',
          description: 'Check monitor_agent metric'
 
+  # Main function
+  #
   def run
     if !config[:metric]
       critical 'No metric setting "buffer_queue_length", "retry_count"...'
@@ -80,6 +84,9 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
     end
   end
 
+  # Reterive the json blob and check to make sure the user
+  # supplied meteric is not nil
+  #
   def acquire_resource
     http = Net::HTTP.new(config[:host], config[:port])
     response = http.get(config[:request_uri])

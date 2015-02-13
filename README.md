@@ -1,20 +1,32 @@
-## Sensu-Plugins-disk-checks
+## Sensu-Plugins-fluentd
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd.svg?branch=master)][1]
-[![Gem Version](https://badge.fury.io/rb/sensu-plugins-fluentd.svg)][2]
-[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/gpa.svg)][3]
-[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/coverage.svg)][4]
-[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd.svg)][5]
+[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd)
+[![Gem Version](https://badge.fury.io/rb/sensu-plugins-fluentd.svg)](http://badge.fury.io/rb/sensu-plugins-fluentd)
+[![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
+[![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
+[![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd)
 
 ## Functionality
 
+**check-fluentd-monitor-agent**
+
+Check a user supplied metric against a remote fluentd monitor
+
 ## Files
- *
- *
- *
- *
+ * bin/check-fluentd-monitor-agent
 
 ## Usage
+
+**fluentd** example handler configuration
+```json
+{
+  "fluentd": {
+    "host": "localhost",
+    "port": 9880,
+    "tag_prefix": "sensu"
+  }
+}
+```
 
 ## Installation
 
@@ -40,23 +52,15 @@ Add *sensu-plugins-disk-checks* to your Gemfile and run `bundle install` or `bun
 Using the Sensu **sensu_gem** LWRP
 ```
 sensu_gem 'sensu-plugins-fluentd' do
-  options('--prerelease')
-  version '0.0.1.alpha.4'
+  version '0.0.1'
 end
 ```
 
 Using the Chef **gem_package** resource
 ```
 gem_package 'sensu-plugins-fluentd' do
-  options('--prerelease')
-  version '0.0.1.alpha.4'
+  version '0.0.1'
 end
 ```
 
 ## Notes
-
-[1]:[https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd]
-[2]:[http://badge.fury.io/rb/sensu-plugins-fluentd]
-[3]:[https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd]
-[4]:[https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd]
-[5]:[https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd]

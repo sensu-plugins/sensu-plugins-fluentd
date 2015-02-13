@@ -11,7 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'sensu-plugins-dev'
 
   script = <<EOF
-  sudo yum update -y
+  #sudo yum update -y
   sudo yum groupinstall -y development
   sudo yum install -y vim nano
   #sudo yum install -y ImagicMagic ImageMagick-devel mysql-devel # needed for bundle install
