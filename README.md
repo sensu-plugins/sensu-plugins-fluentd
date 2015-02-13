@@ -12,8 +12,13 @@
 
 Check a user supplied metric against a remote fluentd monitor
 
+**handler-fluentd**
+
+Fluentd Sensu handler
+
 ## Files
  * bin/check-fluentd-monitor-agent
+ * bin/handler-fluentd
 
 ## Usage
 
