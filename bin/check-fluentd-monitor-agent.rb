@@ -55,7 +55,7 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
 
   # Main function
   #
-  def run
+  def run # rubocop:disable all
     if !config[:metric]
       critical 'No metric setting "buffer_queue_length", "retry_count"...'
     elsif !config[:warn]
@@ -87,7 +87,7 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
   # Reterive the json blob and check to make sure the user
   # supplied meteric is not nil
   #
-  def acquire_resource
+  def acquire_resource # rubocop:disable all
     http = Net::HTTP.new(config[:host], config[:port])
     response = http.get(config[:request_uri])
     result = JSON.parse(response.body)
