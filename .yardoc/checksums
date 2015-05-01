@@ -1,4 +1,0 @@
-lib/sensu-plugins-fluentd.rb 9771fa2ea389a0ed5cdb502a31292de1ccbebf91
-lib/sensu-plugins-fluentd/version.rb a60eddaddbe4c57f8852a81ea36d2b529bcb278a
-bin/handler-fluentd.rb 4f8d4a72258999e37e2ca67854273d1bea4bfa75
-bin/check-fluentd-monitor-agent.rb e83de09cbaf6967c5a40fb73475278c3fbe40f2c
