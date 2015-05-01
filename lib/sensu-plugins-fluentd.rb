@@ -1,7 +1,14 @@
+require 'sensu-plugins-fluentd/version'
+
+# Load the defaults
+
 #
-# Set gem version
+# Default class
 #
 module SensuPluginsFluentd
-  # Gem version
-  VERSION = '0.0.1'
+  class << self
+  end
+
+  class << self
+  end
 end

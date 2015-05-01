@@ -1,11 +1,11 @@
-#### 0.0.1
+#Change Log
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-* initial relase with identical code as in the community repo
-* basic yard doc coverage
-* rename fluentd.rb handler to handler-fluentd.rb
+This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
-#### 0.0.2
+## Unreleased][unreleased]
 
-* add chef provisioner to Vagrantfile
-* add metadata to gemspec
-* fix rubocop errors
+## 0.0.1 - 2015-04-29
+
+### Added
+- initial release
