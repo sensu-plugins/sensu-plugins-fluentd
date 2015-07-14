@@ -1,6 +1,6 @@
 ## Sensu-Plugins-fluentd
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-fluentd)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-fluentd.svg)](http://badge.fury.io/rb/sensu-plugins-fluentd)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
