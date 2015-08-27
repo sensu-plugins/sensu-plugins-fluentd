@@ -63,7 +63,7 @@ class Fluentd < Sensu::Handler
 
   # main function
   #
-  def handle # rubocop:disable all
+  def handle
     event = {
       action: action_to_string,
       name: event_name,
