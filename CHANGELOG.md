@@ -6,6 +6,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ## Unreleased
 [ 0.0.4 ] - 2015-10-30
 - fix specify timeout; default to 5 seconds
+- Fix uninitialized contstant Timeout error
 
 ## [0.0.3] - 2015-07-14
 ### Changed
@@ -23,3 +24,4 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ### Changed
 - removed cruft from /lib
+
