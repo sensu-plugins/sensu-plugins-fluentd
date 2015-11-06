@@ -52,6 +52,13 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
          long: '--metric METRIC',
          description: 'Check monitor_agent metric'
 
+  option :timeout,
+         short: '-t SECONDS',
+         long: '--timeout SECONDS',
+         description: 'Timeout value in seconds',
+         default: '5',
+         proc: proc(&:to_i)
+
   # Main function
   #
   def run
