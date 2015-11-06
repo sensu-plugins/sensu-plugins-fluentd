@@ -26,6 +26,7 @@
 #
 
 require 'sensu-plugin/check/cli'
+require 'timeout'
 require 'net/http'
 require 'json'
 
