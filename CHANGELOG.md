@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## Unreleased
-[ 0.0.4 ] - 2015-10-30
+### Fixed
 - fix specify timeout; default to 5 seconds
 - Fix uninitialized contstant Timeout error
 
