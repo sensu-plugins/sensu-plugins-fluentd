@@ -57,7 +57,7 @@ class CheckFluentdMonitorAgent < Sensu::Plugin::Check::CLI
          short: '-t SECONDS',
          long: '--timeout SECONDS',
          description: 'Timeout value in seconds',
-         default: '5',
+         default: 5,
          proc: proc(&:to_i)
 
   # Main function
