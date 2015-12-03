@@ -31,4 +31,3 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ### Changed
 - removed cruft from /lib
-
