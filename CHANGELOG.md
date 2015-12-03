@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## Unreleased
+
+[0.1.0] - 2015-12-03
+### Added
+- Added timeout option to check-fluentd-monitor-agent.rb
+
 ### Fixed
-- fix specify timeout; default to 5 seconds
-- Fix uninitialized contstant Timeout error
+- Fix uninitialized constant Timeout error
+
+### Changed
+- Updated to rubocop 0.32.1
 
 ## [0.0.3] - 2015-07-14
 ### Changed
