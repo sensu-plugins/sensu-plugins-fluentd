@@ -5,7 +5,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## Unreleased
 
-[0.1.0] - 2015-12-03
+## [0.1.0] - 2015-12-03
 ### Added
 - Added timeout option to check-fluentd-monitor-agent.rb
 
