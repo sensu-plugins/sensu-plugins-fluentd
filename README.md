@@ -19,6 +19,7 @@ Fluentd Sensu handler
 
 ## Files
  * bin/check-fluentd-monitor-agent.rb
+ * bin/metric-fluentd-monitor-agent.rb
  * bin/handler-fluentd.rb
 
 ## Usage
