@@ -1,10 +1,10 @@
-#! /usr/bin/env ruby
+#!/usr/bin/env ruby
 #
 #   metric-fluentd-monitor
 #
 # DESCRIPTION:
 #   This plugin uses fluentd monitor_agent to monitor buffer, produces
-#   Graphite formated output.
+#   Graphite formatted output.
 #
 # OUTPUT:
 #   metric data
@@ -33,13 +33,13 @@ require 'json'
 
 class MetricFluentdMonitorAgent < Sensu::Plugin::Metric::CLI::Graphite
   option :scheme,
-         description: 'Metric naming scheme',
          long: '--scheme SCHEME',
+         description: 'Metric naming scheme',
          default: "#{Socket.gethostname}.fluentd"
   option :url,
          short: '-u URL',
          long: '--url URL',
-         description: 'A URL to connect to',
+         description: 'Fluentd plugins json path',
          default: 'http://localhost:24220/api/plugins.json'
   option :timeout,
          short: '-t SECONDS',
@@ -54,8 +54,6 @@ class MetricFluentdMonitorAgent < Sensu::Plugin::Metric::CLI::Graphite
       config[:host] = uri.host
       config[:port] = uri.port
       config[:request_uri] = uri.request_uri
-    else
-      unknown 'No URL specified'
     end
 
     begin
