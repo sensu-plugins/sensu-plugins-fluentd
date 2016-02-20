@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-fluentd)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-fluentd)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-fluentd](https://codeship.com/projects/fe235610-d22f-0132-a14d-4afb0344239b/status?branch=master)](https://codeship.com/projects/77468)
 
 ## Functionality
 

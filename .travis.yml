@@ -1,19 +1,33 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+- gem build sensu-plugins-fluentd.gemspec
+- gem install sensu-plugins-fluentd-*.gem
+deploy:
+  provider: rubygems
+  api_key:
+    secure: a0eVPU7BIhPHzXTnAbd9JOscrac41ZG92UklUjJPB/63CMQeoJ14fNtoNvKg/Urs2RY0+Zgu8tUNcYxnB76o0TmjnA4NxQfKZeFwIssdslV/PYGWHzBEI+SbtiukTMDoI2kTCYnHIE/P1bMS3uVIm5lPIxURO6RWee3FyoyLqkc=
+  gem: sensu-plugins-fluentd
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-fluentd
