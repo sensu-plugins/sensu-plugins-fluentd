@@ -86,14 +86,14 @@ class Fluentd < Sensu::Handler
 
         response = http.request(request)
         if response.code == '200'
-          puts "fluentd -- #{@event['action']} incident -- #{incident_key}"
+          puts "fluentd -- #{@event['action']} incident -- #{event_name}"
         else
-          puts "fluentd -- failed to send #{@event['action']} incident -- #{incident_key}"
+          puts "fluentd -- failed to send #{@event['action']} incident -- #{event_name}"
           puts "fluentd -- response: #{response.inspect}"
         end
       end
     rescue Timeout::Error
-      puts "fluentd -- Timed out while attempting to send #{@event['action']} incident -- #{incident_key}"
+      puts "fluentd -- Timed out while attempting to send #{@event['action']} incident -- #{event_name}"
     end
   end
 end
