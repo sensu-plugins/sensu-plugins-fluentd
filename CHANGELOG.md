@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Fixed
+- handler-fluentd.rb: Fix undefined local variable `incident_key` (@jkernech)
 
 ## [0.1.0] - 2015-12-03
 ### Added
