@@ -7,6 +7,9 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 ### Fixed
 - handler-fluentd.rb: Fix undefined local variable `incident_key` (@jkernech)
 
+### Changed
+- Update `timeout` method to remove deprecation warnings (@eheydrick)
+
 ## [0.1.0] - 2015-12-03
 ### Added
 - Added timeout option to check-fluentd-monitor-agent.rb
