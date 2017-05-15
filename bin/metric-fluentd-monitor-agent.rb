@@ -57,7 +57,7 @@ class MetricFluentdMonitorAgent < Sensu::Plugin::Metric::CLI::Graphite
     end
 
     begin
-      timeout(config[:timeout]) do
+      Timeout.timeout(config[:timeout]) do
         acquire_resource
       end
     rescue Timeout::Error
